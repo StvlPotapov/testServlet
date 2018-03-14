@@ -18,6 +18,7 @@ public class UserPaymentMethod {
     @Column
     private String qiwiNumber;
 
+
     @Column
     @ManyToOne
     @JoinColumn(name = "user_id",nullable = false)
