@@ -7,10 +7,11 @@
   <servlet>
 
     <servlet-name>MainServlet</servlet-name>
-    <servlet-class>MainServlet</servlet-class>
+    <servlet-class>MainServlet </servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>MainServlet</servlet-name>
     <url-pattern>/MainServlet</url-pattern>
   </servlet-mapping>
+
 </web-app>
