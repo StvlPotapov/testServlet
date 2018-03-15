@@ -25,7 +25,12 @@ public class UserAuthAccount {
     @JoinColumn(name = "user_id", nullable = false)
     private User userId;
 
-    public UserAuthAccount() {
+    protected UserAuthAccount() {
+    }
+
+    public UserAuthAccount(URL vkMail, User userId) {
+        this.vkMail = vkMail;
+        this.userId = userId;
     }
 
     public Long getId() {
@@ -50,5 +55,14 @@ public class UserAuthAccount {
 
     public void setUserId(User userId) {
         this.userId = userId;
+    }
+
+    @Override
+    public String toString() {
+        return "UserAuthAccount{" +
+                "id=" + id +
+                ", vkMail=" + vkMail +
+                ", userId=" + userId +
+                '}';
     }
 }

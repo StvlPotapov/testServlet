@@ -24,8 +24,13 @@ public class UserPaymentMethod {
     @JoinColumn(name = "user_id",nullable = false)
     private User userId;
 
-    public UserPaymentMethod(){
+    protected UserPaymentMethod(){
 
+    }
+
+    public UserPaymentMethod(String qiwiNumber, User userId) {
+        this.qiwiNumber = qiwiNumber;
+        this.userId = userId;
     }
 
     public Long getId() {
@@ -50,5 +55,14 @@ public class UserPaymentMethod {
 
     public void setUserId(User userId) {
         this.userId = userId;
+    }
+
+    @Override
+    public String toString() {
+        return "UserPaymentMethod{" +
+                "id=" + id +
+                ", qiwiNumber='" + qiwiNumber + '\'' +
+                ", userId=" + userId +
+                '}';
     }
 }

@@ -35,7 +35,14 @@ public class User implements Serializable {//но это не точно
     @Column(nullable = false)
     private String phoneNumber;
 
-    public User() {
+    protected User() {
+    }
+
+    public User(String firstName, String lastName, Date dateOfBirth, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
     }
 
     public Long getId() {
@@ -76,5 +83,16 @@ public class User implements Serializable {//но это не точно
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }
