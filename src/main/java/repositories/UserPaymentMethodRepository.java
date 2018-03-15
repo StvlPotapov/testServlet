@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserPaymentMethodRepository extends CrudRepository<UserPaymentMethod, Long> {
 
+
+
 }
