@@ -1,6 +1,6 @@
-package repositories;
+package project.repositories;
 
-import entity.UserPaymentMethod;
+import project.entity.UserPaymentMethod;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

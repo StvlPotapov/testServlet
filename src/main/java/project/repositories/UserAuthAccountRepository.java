@@ -1,6 +1,6 @@
-package repositories;
+package project.repositories;
 
-import entity.UserAuthAccount;
+import project.entity.UserAuthAccount;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
