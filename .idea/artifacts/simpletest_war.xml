@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="simpletest:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="test spring data jpa and connect to db.war">
+    <root id="archive" name="jpadb.war">
       <element id="artifact" artifact-name="simpletest:war exploded" />
     </root>
   </artifact>

@@ -10,6 +10,7 @@ public class UserAuthAccount {
     /**
      * id линкованных аккаунтов
      */
+    @Id
     @Column(name = "id_user_auth", nullable = false, unique = true)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

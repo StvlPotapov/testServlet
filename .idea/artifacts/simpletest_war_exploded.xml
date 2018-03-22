@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="simpletest:war exploded">
-    <output-path>$PROJECT_DIR$/target/test spring data jpa and connect to db</output-path>
+    <output-path>$PROJECT_DIR$/target/jpadb</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -12,7 +12,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.0.7.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.0.7.RELEASE" />
@@ -22,6 +21,8 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.7" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.14.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.14.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.2.13.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.1.Final" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.2.13.Final" />
@@ -41,7 +42,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/test spring data jpa and connect to db/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/jpadb/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="simpletest/web/Web" />
     </root>
