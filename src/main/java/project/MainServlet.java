@@ -16,7 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import project.repositories.UserRepository;
 import project.service.UserService;
 
+import javax.annotation.Resource;
 import javax.jws.soap.SOAPBinding;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,21 +38,25 @@ public class MainServlet extends HttpServlet {
     @Autowired
     UserRepository repository;  //тестовая строка
 
-  //  UserService userService;
+    //  UserService userService;
 
 
-    // @Resource
-    //private EntityManager entityManager;
+    @Resource
+    @PersistenceContext
+    private EntityManager entityManager;
+
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
 
-       // SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+        // SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
         SpringBeanAutowiringSupport.processInjectionBasedOnServletContext(this,
                 config.getServletContext());
 
     }
 
+    @Override
+    @Transactional
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("---TEST---");
         System.out.println(req.getPathInfo());
@@ -62,6 +69,8 @@ public class MainServlet extends HttpServlet {
         User user = new User("12", "34", new Date(), "234567");
         repository.save(user);
         System.out.println(repository.count());
+        System.out.println(entityManager);
+
 
 
        /* userService.findAll();
