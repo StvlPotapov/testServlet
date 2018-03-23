@@ -14,7 +14,6 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import project.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import project.repositories.UserRepository;
-import project.service.UserService;
 
 import javax.annotation.Resource;
 import javax.jws.soap.SOAPBinding;
@@ -25,7 +24,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.transaction.Transactional;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,10 +39,10 @@ public class MainServlet extends HttpServlet {
     //  UserService userService;
 
 
-    @Resource
+  /*  @Resource
     @PersistenceContext
     private EntityManager entityManager;
-
+*/
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -56,7 +54,7 @@ public class MainServlet extends HttpServlet {
     }
 
     @Override
-    @Transactional
+
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("---TEST---");
         System.out.println(req.getPathInfo());
@@ -69,7 +67,7 @@ public class MainServlet extends HttpServlet {
         User user = new User("12", "34", new Date(), "234567");
         repository.save(user);
         System.out.println(repository.count());
-        System.out.println(entityManager);
+        //System.out.println(entityManager);
 
 
 

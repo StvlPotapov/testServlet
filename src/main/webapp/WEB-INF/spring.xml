@@ -20,15 +20,15 @@
     <context:annotation-config />
 
     <!-- Datasource, that is currently hsqldb (in-memory database). -->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+   <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/testUsers" />
         <property name="username" value="root" />
         <property name="password" value="MySQLRootPassword12" />
     </bean>
-
+-->
     <!-- EntityManagerFactory -->
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+    <!--<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
           p:packagesToScan="project.entity"
           p:dataSource-ref="dataSource"
     >
@@ -39,11 +39,11 @@
             </bean>
         </property>
     </bean>
-
+-->
     <!-- Transactions -->
-    <tx:annotation-driven transaction-manager="transactionManager" />
+   <!-- <tx:annotation-driven transaction-manager="transactionManager" />
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
-    </bean>
+    </bean>-->
 
 </beans>
