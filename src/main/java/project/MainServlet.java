@@ -89,9 +89,6 @@ public class MainServlet extends HttpServlet {
         System.out.println(req.getQueryString());
         System.out.println(entityManager);
 *//*
-
-
-
       //  repository.findAll();
 
     }
@@ -101,8 +98,6 @@ public class MainServlet extends HttpServlet {
         super.doPut(req, resp);
 
     }*/
-
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doPost(req, resp);
