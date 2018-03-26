@@ -16,6 +16,13 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+
+/**
+
+ @EnableTransactionManagement – включает TransactionManager для управления транзакциями БД;
+
+ @ComponentScan - указание места где искать Entity
+ */
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("project")

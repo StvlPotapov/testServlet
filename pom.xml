@@ -34,7 +34,7 @@
             <version>4.3.14.RELEASE</version>
         </dependency>
 
-        <!-- hibernate/jpa-->
+        <!-- hibernate-->
 
         <dependency>
             <groupId>org.hibernate</groupId>
